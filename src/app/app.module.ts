@@ -1,36 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
-import { Nopage404Component } from './shared/nopage404/nopage404.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { Graficas1Component } from './pages/graficas1/graficas1.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
-import { PagesComponent } from './pages/pages.component';
 import { RegisterComponent } from './login/register.component';
-
+import { PagesModule } from './pages/pages.module';
+import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    Nopage404Component,
-    DashboardComponent,
-    ProgressComponent,
-    Graficas1Component,
-    HeaderComponent,
-    SidebarComponent,
-    BreadcrumbsComponent,
-    PagesComponent,
-    RegisterComponent
+    RegisterComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PagesModule,FormsModule,ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
